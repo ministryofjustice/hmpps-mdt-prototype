@@ -1,0 +1,16 @@
+{
+  "name": "mdt-testing-prototype",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static GOV.UK prototype, served via Express for Cloud Platform hosting",
+  "scripts": {
+    "start": "node server.js",
+    "serve": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
