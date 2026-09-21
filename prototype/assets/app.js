@@ -2012,7 +2012,7 @@
               <td class="govuk-table__cell">${p.activityEvening ? escape(p.activityEvening) : 'No planned activity'}</td>
             </tr>
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Active alerts</th>
+              <th scope="row" class="govuk-table__header">Relevant alerts</th>
               <td class="govuk-table__cell">${renderAlertTagRow(p, { allowEmpty: true })}</td>
             </tr>
           </tbody>
