@@ -5,10 +5,16 @@
   "description": "Static GOV.UK prototype, served via Express for Cloud Platform hosting",
   "scripts": {
     "start": "node server.js",
-    "serve": "node server.js"
+    "serve": "node server.js",
+    "kit:dev": "govuk-prototype-kit dev",
+    "kit:serve": "govuk-prototype-kit serve",
+    "kit:start": "govuk-prototype-kit start"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "@govuk-prototype-kit/common-templates": "3.0.1",
+    "express": "^4.19.2",
+    "govuk-frontend": "6.5.1",
+    "govuk-prototype-kit": "13.20.5"
   },
   "engines": {
     "node": ">=18"

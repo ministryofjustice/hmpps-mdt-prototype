@@ -1,5 +1,10 @@
 /* Prototype-specific styles. Prefer GOV.UK Frontend classes over bespoke rules. */
 
+/* Wider page container than the GOV.UK default of 960px. */
+.govuk-width-container {
+  max-width: 1280px;
+}
+
 /* Tighten the gap below a legend heading so radios sit closer to the question. */
 .mdt-legend-heading {
   margin-bottom: 5px;
@@ -49,38 +54,6 @@
   margin-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-}
-.dps-mini-profile-header__alerts {
-  flex: 1 1 100%;
-  margin-top: 15px;
-}
-.mdt-alert-tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.mdt-alert-tag {
-  margin: 0;
-  padding: 3px 10px;
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: 19px;
-  line-height: 1.2;
-  color: #0b0c0c;
-  background: #ffffff;
-  border: 3px solid #1d70b8;
-}
-.mdt-alert-tag--red {
-  border-color: #d4351c;
-}
-.mdt-alert-tag--orange {
-  border-color: #f47738;
-}
-.mdt-alert-tag--pink {
-  border-color: #d53880;
-}
-.mdt-alert-tag--blue {
-  border-color: #1d70b8;
 }
 @media (max-width: 40.0525em) {
   .dps-mini-profile-header {
@@ -504,47 +477,76 @@
   color: #594d00;
 }
 
-/* ---- DPS header extras (DEV tag, account, menu, search) --------------- */
-.mdt-dps-header__dev-tag {
-  margin-left: 10px;
-  vertical-align: middle;
+/* ---- DPS header (static, non-interactive) ------------------------------ */
+.mdt-dps-header {
+  background: #0b0c0c;
+  color: #ffffff;
+  font-family: "GDS Transport", arial, sans-serif;
 }
-
-.govuk-header__content {
+.mdt-dps-header__inner {
+  display: flex;
+  align-items: stretch;
+  gap: 15px;
+  min-height: 60px;
+}
+.mdt-dps-header__inner > * {
+  align-self: center;
+}
+.mdt-dps-header__inner > .mdt-dps-header__search {
+  align-self: stretch;
+}
+.mdt-dps-header__brand {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
+  color: #ffffff;
+  text-decoration: none;
 }
-
+.mdt-dps-header__crown {
+  width: 36px;
+  height: 32px;
+}
+.mdt-dps-header__brand-text {
+  font-size: 24px;
+  line-height: 1;
+}
+.mdt-dps-header__dev-tag {
+  margin-left: 25px;
+  padding: 4px 10px;
+  background: #d2e2f1;
+  color: #0f385c;
+  font-size: 24px;
+  line-height: 1.1;
+}
 .mdt-dps-header__actions {
   display: flex;
   align-items: center;
-  gap: 20px;
   margin-left: auto;
-  color: #ffffff;
-  font-size: 16px;
+  font-size: 19px;
 }
-
+.mdt-dps-header__group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  padding: 0 20px 0 12px;
+  border-left: 1px solid #ffffff;
+}
+.mdt-dps-header__chevron {
+  width: 16px;
+  height: 16px;
+}
+.mdt-dps-header__user {
+  width: 32px;
+  height: 32px;
+}
 .mdt-dps-header__search {
+  flex: 0 0 auto;
+  width: 60px;
   background: #1d70b8;
   border: 0;
   color: #ffffff;
-  padding: 8px 14px;
   cursor: pointer;
-  font-size: 18px;
-}
-
-.mdt-dps-header__simple-link {
-  color: #b1b4b6;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.mdt-dps-header__simple-link:hover,
-.mdt-dps-header__simple-link:focus {
-  color: #ffffff;
 }
 
 /* ---- DPS homepage ------------------------------------------------------ */
@@ -643,11 +645,6 @@
 /* ---- Phase 4: workspace header, tabs, list toolbar, sort, releasing flag ---- */
 
 .mdt-workspace-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
   margin-bottom: 10px;
 }
 .mdt-workspace-header__actions {
@@ -655,7 +652,7 @@
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .mdt-workspace-header__actions form { margin: 0; }
 .mdt-workspace-header__actions .govuk-button { margin: 0; }
@@ -748,6 +745,15 @@
 .mdt-selection-table .mdt-release-date {
   display: inline-block;
   margin-bottom: 6px;
+}
+/* Keep status tags on one line (govuk-tag caps width at 160px by default). */
+.mdt-selection-table .mdt-status-cell {
+  min-width: 210px;
+  white-space: nowrap;
+}
+.mdt-selection-table .mdt-status-cell .govuk-tag {
+  max-width: none;
+  white-space: nowrap;
 }
 .mdt-tab-panel { min-height: 200px; }
 

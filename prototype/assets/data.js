@@ -34,29 +34,6 @@
     { id: 'p20', prisonNumber: 'D8834PN', displayName: 'Changretta, Angel', location: 'C-1-006', incentiveLevel: 'Basic',  age: 27, arrivalDate: '2024-11-08', releaseDate: null, ethnicityCode: 'W2' } // no release date recorded
   ];
 
-  const prisonerActiveAlerts = {
-    p1: ['OCG nominal (do not share)', 'Risk to females'],
-    p2: ['No one-to-one', 'Controlled unlock'],
-    p3: ['Violent', 'Staff assaulter'],
-    p4: ['ACCT open', 'PEEP'],
-    p5: ['CSIP', 'Conflict'],
-    p6: ['E-list', 'Escape risk'],
-    p7: ['Risk to staff', 'Racist'],
-    p8: ['Hidden disability', 'Risk to LGBT'],
-    p9: ['No one-to-one', 'ViSOR'],
-    p10: ['Corruptor', 'Potential corruptor'],
-    p11: ['Hostage taker', 'Concerted indiscipline'],
-    p12: ['ACCT post closure', 'Isolated'],
-    p13: ['Chemical attacker', 'E-list heightened'],
-    p14: ['Risk to known adults'],
-    p15: ['Controlled unlock', 'Conflict'],
-    p16: ['OCG nominal (do not share)'],
-    p17: ['Risk to females', 'Risk to staff'],
-    p18: ['PEEP', 'Hidden disability'],
-    p19: ['Corruptor', 'ViSOR'],
-    p20: ['Violent']
-  };
-
   const prisonerReligion = {
     p1: 'Christian', p2: 'Jewish', p3: 'Christian', p4: 'No religion', p5: 'Christian',
     p6: 'Christian', p7: 'Muslim', p8: 'Christian', p9: 'Muslim', p10: 'Christian',
@@ -81,7 +58,6 @@
   };
 
   prisoners.forEach((prisoner) => {
-    prisoner.activeAlerts = prisonerActiveAlerts[prisoner.id] || [];
     prisoner.religion = prisonerReligion[prisoner.id] || 'Not stated';
     prisoner.languagesSpoken = prisonerLanguages[prisoner.id] || 'English';
     const override = activityOverrides[prisoner.id] || {};
