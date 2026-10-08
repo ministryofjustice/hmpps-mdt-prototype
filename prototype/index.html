@@ -2,7 +2,7 @@
 <html lang="en" class="govuk-template">
   <head>
     <meta charset="utf-8" />
-    <title>Mandatory drugs testing (research prototype) — Digital Prison Services</title>
+    <title>Mandatory drug testing (research prototype) — Digital Prison Services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#1d70b8" />
     <meta name="robots" content="noindex" />
@@ -13,7 +13,7 @@
       href="https://unpkg.com/govuk-frontend@5.7.1/dist/govuk/govuk-frontend.min.css"
     />
     <link rel="stylesheet" href="assets/vendor/moj-frontend.min.css" />
-    <link rel="stylesheet" href="assets/styles.css?v=39" />
+    <link rel="stylesheet" href="assets/styles.css?v=43" />
   </head>
   <body class="govuk-template__body">
     <script>
@@ -22,38 +22,41 @@
 
     <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
 
-    <header class="govuk-header" data-module="govuk-header">
-      <div class="govuk-header__container govuk-width-container">
-        <div class="govuk-header__logo">
-          <a href="#/" class="govuk-header__link govuk-header__link--homepage">
-            <span class="govuk-header__logotype-text">Digital Prison Services</span>
-          </a>
-          <span class="govuk-tag mdt-dps-header__dev-tag">DEV</span>
+    <header class="mdt-dps-header">
+      <div class="mdt-dps-header__inner govuk-width-container">
+        <a href="#/" class="mdt-dps-header__brand">
+          <svg class="mdt-dps-header__crown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 32" aria-hidden="true" focusable="false">
+            <g fill="#fff">
+              <path d="M17 0h2v2h2v2h-2v2h-2V4h-2V2h2z"/>
+              <path d="M6 30c0-2 2-3 3-3h18c1 0 3 1 3 3v2H6z"/>
+              <path d="M8 24h20l1 2H7z"/>
+              <circle cx="4" cy="14" r="1.700"/><circle cx="8" cy="9" r="1.700"/><circle cx="13" cy="7" r="1.700"/>
+              <circle cx="23" cy="7" r="1.700"/><circle cx="28" cy="9" r="1.700"/><circle cx="32" cy="14" r="1.700"/>
+              <circle cx="9" cy="14" r="1.500"/><circle cx="14" cy="12" r="1.500"/><circle cx="18" cy="11" r="1.500"/>
+              <circle cx="22" cy="12" r="1.500"/><circle cx="27" cy="14" r="1.500"/>
+              <circle cx="6" cy="19" r="1.500"/><circle cx="12" cy="18" r="1.500"/><circle cx="18" cy="17" r="1.500"/>
+              <circle cx="24" cy="18" r="1.500"/><circle cx="30" cy="19" r="1.500"/>
+            </g>
+          </svg>
+          <span class="mdt-dps-header__brand-text">Digital Prison Services</span>
+        </a>
+        <span class="mdt-dps-header__dev-tag">DEV</span>
+        <div class="mdt-dps-header__actions" aria-hidden="true">
+          <span class="mdt-dps-header__group mdt-dps-header__group--account">
+            <svg class="mdt-dps-header__chevron" viewBox="0 0 16 16" focusable="false"><path d="M2 5l6 6 6-6" fill="none" stroke="#fff" stroke-width="2"/></svg>
+            <svg class="mdt-dps-header__user" viewBox="0 0 32 32" focusable="false"><circle cx="16" cy="16" r="14" fill="none" stroke="#fff" stroke-width="2.5"/><circle cx="16" cy="12.5" r="4.5" fill="none" stroke="#fff" stroke-width="2.5"/><path d="M7 25c1.5-5 5-6.5 9-6.5s7.5 1.500 9 6.500" fill="none" stroke="#fff" stroke-width="2.5"/></svg>
+            <span>M. Test</span>
+          </span>
+          <span class="mdt-dps-header__group mdt-dps-header__group--menu">
+            <svg class="mdt-dps-header__chevron" viewBox="0 0 16 16" focusable="false"><path d="M2 5l6 6 6-6" fill="none" stroke="#fff" stroke-width="2"/></svg>
+            <strong>Menu</strong>
+          </span>
         </div>
-        <div class="govuk-header__content">
-          <a href="#/mdt" id="header-service-name" class="govuk-header__link govuk-header__service-name">
-            Mandatory drugs testing
-          </a>
-          <div class="mdt-dps-header__actions">
-            <a href="#/mdt" id="header-simple-view-link" class="mdt-dps-header__simple-link" hidden>Simple view</a>
-            <span class="mdt-dps-header__account">M. Test</span>
-            <span class="mdt-dps-header__menu">Menu</span>
-            <button type="button" class="mdt-dps-header__search" aria-label="Search">
-              <span aria-hidden="true">&#128269;</span>
-            </button>
-          </div>
-        </div>
+        <button type="button" class="mdt-dps-header__search" aria-label="Search">
+          <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false"><circle cx="13" cy="13" r="9" fill="none" stroke="#fff" stroke-width="3.500"/><path d="M20 20l9 9" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg>
+        </button>
       </div>
     </header>
-
-    <div class="govuk-phase-banner govuk-width-container">
-      <p class="govuk-phase-banner__content">
-        <strong class="govuk-tag govuk-phase-banner__content__tag">Prototype</strong>
-        <span class="govuk-phase-banner__text">
-          Research prototype using fictional data only. Do not use for operational decisions.
-        </span>
-      </p>
-    </div>
 
     <div class="govuk-width-container">
       <nav id="breadcrumbs" class="govuk-breadcrumbs" aria-label="Breadcrumb"></nav>
@@ -106,8 +109,8 @@
          Vendored locally so the prototype works without external network access. -->
     <script src="assets/vendor/govuk-frontend-v6-all.bundle.js"></script>
     <script src="assets/vendor/moj-date-picker.bundle.js"></script>
-    <script src="assets/data.js?v=23"></script>
-    <script src="assets/domain.js?v=22"></script>
-    <script src="assets/app.js?v=74"></script>
+    <script src="assets/data.js?v=24"></script>
+    <script src="assets/domain.js?v=23"></script>
+    <script src="assets/app.js?v=78"></script>
   </body>
 </html>
