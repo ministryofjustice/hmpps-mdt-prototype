@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: moj-prototype-${BRANCH}
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: prototype-${BRANCH}
